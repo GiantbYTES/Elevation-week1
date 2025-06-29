@@ -1,0 +1,11 @@
+button {
+  background-color: rgb(71, 121, 67);
+  color: white;
+  border-width: 1px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+img {
+  width: 100px;
+  padding: 10px;
+}

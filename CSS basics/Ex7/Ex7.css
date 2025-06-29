@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+}
+img {
+  width: 1200px;
+  display: block;
+}
+.text1 {
+  position: absolute;
+  top: 0%;
+  font-size: 30px;
+  opacity: 0.5;
+}
+
+.text2 {
+  position: absolute;
+  top: 70px;
+  font-size: 30px;
+}
+
+div > div {
+  background-color: rgb(53, 17, 86);
+  width: 400px;
+  padding: 20px;
+}
