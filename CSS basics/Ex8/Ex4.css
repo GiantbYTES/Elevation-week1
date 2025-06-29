@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(23, 23, 47);
+}
+h1 {
+  color: rgb(72, 173, 112);
+  text-decoration: underline;
+  text-align: center;
+}
+caption {
+  color: yellowgreen;
+}
+table {
+  width: 100%;
+}
+strong {
+  color: rgb(178, 105, 16);
+}
+td {
+  padding: 5px;
+  text-align: center;
+  color: rgb(192, 192, 192);
+}
+th {
+  padding: 8px;
+  color: rgb(21, 210, 147);
+}
+tr {
+  background-color: rgb(46, 46, 46);
+}

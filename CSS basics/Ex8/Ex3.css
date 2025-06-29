@@ -1,0 +1,24 @@
+body {
+  background-color: azure;
+}
+h1 {
+  color: rgb(0, 86, 171);
+}
+h2 {
+  color: rgb(42, 118, 200);
+}
+h3 {
+  color: rgb(124, 122, 255);
+}
+strong {
+  color: rgb(17, 125, 17);
+}
+p {
+  color: rgb(123, 123, 123);
+}
+a {
+  color: rgb(17, 133, 133);
+}
+ul {
+  background-color: rgb(238, 243, 255);
+}

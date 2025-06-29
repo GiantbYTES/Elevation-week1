@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(236, 239, 255);
+}
+h1 {
+  text-decoration: underline;
+  color: rgb(9, 9, 128);
+}
+h2 {
+  text-decoration: underline;
+  color: rgb(108, 108, 255);
+}
+h3 {
+  text-decoration: underline;
+  color: rgb(68, 68, 255);
+}
+strong {
+  color: rgb(77, 21, 129);
+}
