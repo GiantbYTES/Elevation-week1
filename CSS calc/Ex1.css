@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+.sec1 {
+  width: calc(100% - 20px);
+  height: 80px;
+  background-color: rgb(223, 131, 131);
+}
+.sec2 {
+  width: 20px;
+  height: 80px;
+  background-color: brown;
+}

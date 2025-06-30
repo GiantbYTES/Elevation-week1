@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  width: 40%;
+  border: 2px solid purple;
+}
+.sec1,
+.sec2,
+.sec3 {
+  width: calc(100% - 70px);
+  height: 100px;
+  background-color: rgb(215, 153, 153);
+  border: 2px solid rgb(0, 0, 0);
+}
