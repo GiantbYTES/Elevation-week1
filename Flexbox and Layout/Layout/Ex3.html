@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Ex3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h1>Contact Form</h1>
+        <p style="margin-bottom: 20px">Get in touch with us</p>
+        <div class="row">
+          <div class="col">
+            <label for="fname">First Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="col">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email">Email Adress</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="subject">Subject</label>
+            <select id="subj" name="Subject">
+              <option value="" disabled selected>Select subject</option>
+              <option value="Subject1">Subject 1</option>
+              <option value="Subject2">Subject 2</option>
+              <option value="Subject3">Subject 3</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="priority">Priority </label>
+            <select id="prio" name="Priority">
+              <option value="" disabled selected>Select subject</option>
+              <option value="prio1">Low</option>
+              <option value="prio2">Medium</option>
+              <option value="prio3">High</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <label for="contact">Contact Preferences</label>
+        </div>
+        <div id="checkrow" class="row">
+          <input
+            type="checkbox"
+            id="email-updates"
+            name="email-updates"
+            value="email-updates"
+          />
+          <label for="email-updates" class="check">Email Updates</label>
+          <input
+            type="checkbox"
+            id="phone-follow-up"
+            name="phone-follow-up"
+            value="phone-follow-up"
+          />
+          <label for="phone-follow-up" class="check">Phone Follow-up</label>
+          <input
+            type="checkbox"
+            id="newsletter"
+            name="newsletter"
+            value="newsletter"
+          />
+          <label for="newsletter" class="check">Newsletter</label>
+        </div>
+        <div class="row">
+          <button type="submit" id="save-draft">Save Draft</button>
+          <button type="submit" id="send-message">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

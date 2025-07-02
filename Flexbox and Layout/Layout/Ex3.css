@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-image: linear-gradient(to right, #7086eb, #764da5);
+  color: #333;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 200px;
+}
+form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  margin-right: 10px;
+}
+.col:last-child {
+  margin-right: 0;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+#save-draft {
+  background-color: #f8f9fa;
+  color: #707070;
+  border: 1px solid #ccc;
+  font-weight: 1000;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#send-message {
+  background-image: linear-gradient(to right, #49b1fd, #09e5fe);
+  color: #fff;
+  font-weight: 1000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#checkrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-right: auto;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.check {
+  margin-right: auto;
+}

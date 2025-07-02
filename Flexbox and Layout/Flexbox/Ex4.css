@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 700px;
+  height: 600px;
+  background-color: #ffffff;
+  box-shadow: 2px -3px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  border: 4px solid #de8686;
+}
+.column {
+  display: flex;
+  background-color: #ffffff;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.line {
+  width: 70px;
+  height: 10px;
+  background-color: #de8686;
+  margin: 4px;
+}
+#left {
+  flex-direction: column-reverse;
+  border-right: 4px solid #de8686;
+}
+#right {
+  align-items: center;
+}
+#line1 {
+  max-width: 40px;
+}

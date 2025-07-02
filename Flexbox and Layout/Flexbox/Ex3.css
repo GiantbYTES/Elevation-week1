@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 700px;
+  height: 600px;
+  background-color: #f0f0f0;
+  box-shadow: 2px -3px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+.column {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #5392ff;
+}
