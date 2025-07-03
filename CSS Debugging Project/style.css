@@ -138,6 +138,7 @@ body {
 .dashboard-grid {
   display: flex;
   gap: 2rem;
+  padding: 30px 0;
 }
 
 .widget {
