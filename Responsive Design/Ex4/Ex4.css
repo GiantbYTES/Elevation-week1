@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* ----------- Header ---------- */
+header {
+  background-image: linear-gradient(to right, #7086eb, #764da5);
+}
+header > h1 {
+  color: #ffffff;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 25px;
+}
+main {
+  display: flex;
+  flex: 1;
+}
+.content {
+  padding: 20px;
+}
+/* ------------------------------ */
+/* ------- Navigation bar ------- */
+nav {
+  padding: 20px;
+  background-color: #f8f9fa;
+  width: 200px;
+}
+nav > h3 {
+  font-size: 20px;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+nav > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 16px;
+  padding: 10px;
+  display: inline-block;
+}
+nav > ul > li:hover {
+  background-color: rgb(178, 178, 178);
+}
+/* ----------------------------- */
+/* ------- Main content- ------- */
+.content > h2 {
+  font-size: 24px;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+.contentbox {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contentbox > h2 {
+  font-size: 20px;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+.contentbox > p {
+  font-size: 16px;
+  color: #343a40;
+  line-height: 1.5;
+}
+/* ----------------------------- */
+/* ---------- Sidebar ---------- */
+aside {
+  padding: 20px;
+  background-color: #f8f9fa;
+  width: 200px;
+}
+aside > h3 {
+  font-size: 20px;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+.sidebox {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.sidebox > h4 {
+  font-size: 17px;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+/* ----------------------------- */
+/* ---------- Footer -----------*/
+footer {
+  background-color: #343a40;
+  text-align: center;
+}
+footer > p {
+  color: #ffffff;
+  padding: 20px;
+  font-size: 15px;
+}
+footer > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+footer > ul > li {
+  margin: 0 10px;
+  font-size: medium;
+}
+
+footer > ul > li > a {
+  color: #acb5bd;
+  text-decoration: none;
+}
+footer > ul > li > a:hover {
+  color: #ffffff;
+}
+/* ------------------------------ */
+/* --------- Responsive --------- */
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  nav,
+  aside {
+    width: 100%;
+    padding: 10px;
+  }
+  .content {
+    padding: 10px;
+  }
+  header > h1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+/* ----------------------------- */
