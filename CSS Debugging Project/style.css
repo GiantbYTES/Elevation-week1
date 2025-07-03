@@ -46,10 +46,14 @@ body {
 
 .sidebar-nav ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .nav-item {
   margin-bottom: 0.5rem;
+  flex: 1;
 }
 
 .nav-link {
