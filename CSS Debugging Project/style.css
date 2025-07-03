@@ -89,6 +89,7 @@ body {
 
 .user-info {
   gap: 1rem;
+  display: flex;
 }
 
 .user-avatar {
