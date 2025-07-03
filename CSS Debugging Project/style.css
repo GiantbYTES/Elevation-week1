@@ -109,6 +109,7 @@ body {
 
 .stats-grid {
   gap: 1.5rem;
+  display: flex;
 }
 
 .stat-card {
