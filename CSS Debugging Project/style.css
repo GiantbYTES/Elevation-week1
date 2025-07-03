@@ -101,6 +101,7 @@ body {
   justify-content: center;
   color: white;
   font-weight: bold;
+  border-radius: 50%;
 }
 
 .stats-grid {
