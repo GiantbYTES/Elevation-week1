@@ -246,6 +246,7 @@ body {
 
 .quick-actions {
   display: flex;
+  gap: 15px;
 }
 
 .action-btn {
