@@ -65,7 +65,7 @@ body {
   display: inline-block;
 }
 
-.nav-item .active .nav-link {
+.nav-item.active .nav-link {
   background-color: #3498db;
   color: white;
 }
