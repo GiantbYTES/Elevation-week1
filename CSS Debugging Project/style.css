@@ -405,4 +405,6 @@ body {
   font-size: 0.9rem;
   bottom: 0;
   position: fixed;
+  left: 250px;
+  width: calc(100% - 250px);
 }
