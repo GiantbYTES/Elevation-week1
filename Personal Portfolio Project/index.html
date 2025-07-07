@@ -11,6 +11,10 @@
     <header>
       <div class="header-data">
         <div class="name">Amir Schaked</div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+          ☰
+        </button>
+
         <nav>
           <ul>
             <li id="home" class="nav-button"><a href="#home">Home</a></li>
@@ -174,8 +178,10 @@
                 <label>Message</label>
                 <textarea rows="5"></textarea>
               </div>
-              <div class="con-blue-button">
-                <button class="blue-button">Send Message</button>
+              <div id="send-blue-button-container" class="con-blue-button">
+                <button id="send-blue-button" class="blue-button">
+                  Send Message
+                </button>
               </div>
             </div>
             <div class="contact-information">

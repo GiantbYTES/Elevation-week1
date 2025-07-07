@@ -22,6 +22,13 @@ header {
   width: 100%;
   padding: 10px 0;
 }
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 nav > ul {
   display: flex;
   list-style: none;
@@ -357,6 +364,37 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .header-data {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  nav > ul {
+    flex-direction: column;
+  }
+  nav > ul > li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  nav.active {
+    display: flex;
+  }
   .profile {
     flex-direction: column;
     align-items: center;
@@ -401,5 +439,29 @@ footer {
     width: 100%;
     padding: 20px 0;
     text-align: center;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #send-blue-button {
+    width: 100%;
+    text-align: center;
+  }
+  .contact {
+    padding: 20px 0;
+  }
+  .contact-information {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  .contact-email,
+  .contact-number,
+  .contact-address {
+    justify-content: center;
+  }
+  .contact-links {
+    justify-content: center;
   }
 }
