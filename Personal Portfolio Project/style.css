@@ -44,6 +44,7 @@ nav > ul > li {
 .profile {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   background-image: linear-gradient(to right, #f6f9fb, #e3e8f1);
 }
 .profile > .brief {
@@ -69,7 +70,7 @@ nav > ul > li {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  flex-wrap: wrap;
   padding: 50px 70px;
 }
 .profile-photo {
