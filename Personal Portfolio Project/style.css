@@ -104,7 +104,7 @@ nav > ul > li {
 }
 .about-me {
   padding: 4rem 0;
-  background-color: #f6f9fb;
+  background-color: #ffffff;
   display: flex;
 }
 .about-text {
@@ -159,7 +159,7 @@ nav > ul > li {
 }
 .projects > .title {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 2rem;
@@ -195,13 +195,11 @@ nav > ul > li {
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* align-items: flex-start; */
 }
 .project-title {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
-  /* margin-bottom: 10px; */
 }
 .project-desc > .brief {
   color: #65758c;
@@ -224,4 +222,105 @@ nav > ul > li {
 }
 .orange-button:hover {
   background-color: #d97706;
+}
+.contact {
+  padding: 4rem 70px;
+  background-color: #f6f9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact > .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.contact {
+  background-color: white;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+}
+.send-message {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sender-name,
+.sender-email,
+.sender-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.sender-name > label,
+.sender-email > label,
+.sender-message > label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+.sender-name > input,
+.sender-email > input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.sender-message > textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  height: 100px;
+}
+.contact-information {
+  width: 30%;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+.contact-email,
+.contact-number,
+.contact-address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.email-icon,
+.phone-icon,
+.address-icon {
+  margin-right: 10px;
+}
+.email-text > a,
+.phone-text > a,
+.address-text {
+  color: #67778e;
+  text-decoration: none;
+}
+.contact-links {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: #2463eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
