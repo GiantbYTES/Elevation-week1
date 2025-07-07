@@ -9,11 +9,18 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px 70px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.99);
+}
+.header-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px 0;
 }
 nav > ul {
   display: flex;
@@ -41,16 +48,22 @@ nav > ul > li {
   font-weight: bold;
   color: #2463eb;
 }
-.profile {
+.profile-container {
+  background-image: linear-gradient(to right, #f6f9fb, #e3e8f1);
   display: flex;
+  justify-content: center;
+}
+.profile {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-image: linear-gradient(to right, #f6f9fb, #e3e8f1);
 }
 .profile > .brief {
   width: 50%;
   margin-right: 20px;
-  padding: 50px 70px;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -66,7 +79,7 @@ nav > ul > li {
   color: #65758c;
   margin-top: 20px;
 }
-.profile-container {
+.profile-photo-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,20 +116,24 @@ nav > ul > li {
 .blue-button:hover {
   background-color: #1a4bbd;
 }
+.about-me-container {
+  display: flex;
+  justify-content: center;
+}
 .about-me {
   padding: 4rem 0;
   background-color: #ffffff;
   display: flex;
+  max-width: 1200px;
 }
 .about-text {
   width: 60%;
-  padding: 0 70px;
   display: flex;
   flex-direction: column;
 }
 .skills {
   width: 40%;
-  padding: 0 70px;
+  padding-left: 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -154,9 +171,14 @@ nav > ul > li {
   background-color: #2463eb;
   border-radius: 4px;
 }
+.projects-container {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #f6f9fb, #e3e8f1);
+}
 .projects {
-  padding: 4rem 70px;
-  background-color: #f6f9fb;
+  max-width: 1200px;
+  padding: 4rem 0;
 }
 .projects > .title {
   text-align: center;
@@ -224,9 +246,14 @@ nav > ul > li {
 .orange-button:hover {
   background-color: #d97706;
 }
+.get-in-touch-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
 .contact {
+  max-width: 1200px;
   padding: 4rem 70px;
-  background-color: #f6f9fb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,20 +264,18 @@ nav > ul > li {
   color: #333;
   margin-bottom: 2rem;
 }
-.contact {
-  background-color: white;
-}
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 100%;
+  width: 1200px;
 }
 .send-message {
-  width: 60%;
+  width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  flex: 2;
 }
 .sender-name,
 .sender-email,
@@ -286,6 +311,7 @@ nav > ul > li {
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .contact-title {
   font-size: 1.1rem;
