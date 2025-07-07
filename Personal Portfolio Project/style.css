@@ -247,35 +247,34 @@ nav > ul > li {
   background-color: #d97706;
 }
 .get-in-touch-container {
-  display: flex;
-  justify-content: center;
   background-color: white;
 }
 .contact {
   max-width: 1200px;
-  padding: 4rem 70px;
+  padding: 4rem 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
 .contact > .title {
   font-size: 1.1rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .contact-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
-  width: 1200px;
+  width: 100%;
 }
 .send-message {
   width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex: 2;
 }
 .sender-name,
 .sender-email,
@@ -311,7 +310,6 @@ nav > ul > li {
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 .contact-title {
   font-size: 1.1rem;
