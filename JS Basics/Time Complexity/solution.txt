@@ -1,0 +1,11 @@
+//Ex1 - O(n) 
+
+//Ex2 - O(log n)
+
+//Ex3 - O(1)
+
+//Ex4 - O(n * m) 
+
+//Ex5 - O(n)
+
+//Ex9 - O(1): green, O(log n): yellow, O(n): blue, O(n^2): red
