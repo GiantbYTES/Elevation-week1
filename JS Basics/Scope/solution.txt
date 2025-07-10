@@ -1,0 +1,36 @@
+//Section 1
+
+ - there will be an error because "distance" is declared with let inside the if block and is not accessible outside of it
+ - it will not console log anything because of the error
+    - "distance" will be undefined in the last console log
+
+//Section 2
+
+- there will be an error because "cowSound" is declared with let inside the if block and is not accessible in the else block
+- it will not console log anything because of the error
+
+
+//Section 3
+
+- it will console log "Served a special fish", "Served a special lettuce plate", "Served a special curious cheese", and "Finished serving all the orders: fish,lettuce plate,curious cheese"
+- there will be no error
+- "specialOrder" will be undefined in the last console log
+- because "specialOrder" is declared with let inside the for loop it is not accessible outside
+- "orders" is local to the function, "specialOrder" is local to the for loop
+
+//Section 4
+
+- there will be an error because "seed" is declared with const inside the getSeed function and is not accessible in the plant function
+- it will not console log anything because of the error
+- "seed" is local to the getSeed function and not accessible in the plant function
+
+//Section 5
+
+- there will be an error because "found" is declared with const inside the for loop and is not accessible outside
+- it will not console log anything because of the error
+
+//Section 6
+
+- there will be an error because "isEnough" is declared with const and cannot be reassigned
+- it will not console log anything because of the error
+- "isEnough" is global, but it cannot be reassigned inside the function
