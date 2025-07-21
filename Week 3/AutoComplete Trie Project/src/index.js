@@ -5,17 +5,14 @@ class AutoCompleteTrie {
     this.endOfWord = endOfWord;
   }
   addWord(word) {
-    let index = 0;
-    const arr = word.split("");
-    while (this.children[arr[index]]) {
-      this.children = this.children.children;
-      index++;
+    let curLetter = this;
+    for (let l of word) {
+      if (!curLetter.children[l]) {
+        curLetter.children[l] = new AutoCompleteTrie(l, {}, false);
+      }
+      curLetter = curLetter.children[l];
     }
-    while (index < arr.length) {
-      this.children = arr[i];
-      index++;
-    }
-    this.endOfWord = true;
+    curLetter.endOfWord = true;
   }
   findWord(word) {
     return true;
@@ -31,6 +28,7 @@ class AutoCompleteTrie {
   }
 }
 
-const nTree = new AutoCompleteTrie();
+const nTree = new AutoCompleteTrie(null, {}, false);
 nTree.addWord("hi");
-console.log("tree:" + nTree);
+nTree.addWord("hello");
+console.log(nTree.children);
