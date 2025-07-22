@@ -73,4 +73,6 @@ class AutoCompleteTrie {
   }
 }
 
+// Exporting the AutoCompleteTrie class
+
 module.exports = AutoCompleteTrie;
