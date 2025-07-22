@@ -28,21 +28,49 @@ class AutoCompleteTrie {
     }
   }
   predictWords(prefix) {
-    return true;
+    let words = [];
+    let curLetter = this._getRemainingTree(prefix, this);
+    if (!curLetter) {
+      return [];
+    }
+    for (let n in curLetter.children) {
+      this._allWordsHelper("", curLetter.children[n], words);
+    }
+    words = words.map((w) => {
+      return prefix + w;
+    });
+    return words;
   }
   _getRemainingTree(prefix, node) {
-    return true;
+    let curLetter = node;
+    for (let l of prefix) {
+      if (!curLetter.children[l]) {
+        return false;
+      } else {
+        curLetter = curLetter.children[l];
+      }
+    }
+    return curLetter;
   }
   _allWordsHelper(prefix, node, allWords) {
-    return true;
+    // Helper function to return all words in the trie but with the prefix it was given and null before it
+    // For example: if the prefix is "h" and the word is "hi", it will return "hnullhi"
+    if (!node.children && node.endOfWord) {
+      const newWord = prefix + node.value;
+      return allWords.push(newWord);
+    } else if (node.children && node.endOfWord) {
+      const newWord = prefix + node.value;
+      allWords.push(newWord);
+      for (let n in node.children) {
+        node._allWordsHelper(newWord, node.children[n], allWords);
+      }
+    } else {
+      for (let n in node.children) {
+        const newWord = prefix + node.value;
+        node._allWordsHelper(newWord, node.children[n], allWords);
+      }
+    }
   }
 }
-
-const nTree = new AutoCompleteTrie(null, {}, false);
-nTree.addWord("hi");
-nTree.addWord("hello");
-
-console.log(nTree.children);
-console.log(nTree.findWord("hi"));
 
 module.exports = AutoCompleteTrie;
