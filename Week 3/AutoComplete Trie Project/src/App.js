@@ -35,7 +35,11 @@ function run() {
     let input = ui.getChoice();
     let args = input.split(" ");
     choice = args[0];
-    handleChoice(choice, args[1]);
+    try {
+      handleChoice(choice, args[1]);
+    } catch (err) {
+      console.log(err.message);
+    }
   }
 }
 
