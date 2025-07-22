@@ -12,7 +12,7 @@ function getChoice() {
   return choice;
 }
 function handleAdd(word) {
-  console.log(`✓ Added '${word} to dictionary\n`);
+  console.log(`✓ Added '${word}' to dictionary\n`);
 }
 function handleFind(word, found) {
   if (found) {

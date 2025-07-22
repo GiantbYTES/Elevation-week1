@@ -6,14 +6,17 @@ const nTrie = new AutoCompleteTrie("", {}, false);
 function handleChoice(choise, arg = null) {
   switch (choise) {
     case "add":
+      arg = arg.toLowerCase();
       nTrie.addWord(arg);
       ui.handleAdd(arg);
       break;
     case "find":
+      arg = arg.toLowerCase();
       const found = nTrie.findWord(arg);
       ui.handleFind(arg, found);
       break;
     case "complete":
+      arg = arg.toLowerCase();
       const words = nTrie.predictWords(arg);
       ui.handleComplete(arg, words);
       break;
