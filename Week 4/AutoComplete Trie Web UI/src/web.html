@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="addWordContainer">
+        <div id="wordInputContainer">
+          <input
+            type="text"
+            id="wordInput"
+            placeholder="Enter a word to add to dictionary"
+          />
+        </div>
+        <div id="buttonContainer">
+          <button id="addWordButton" onClick="addNewWord()">Add Word</button>
+        </div>
+      </div>
+      <div id="feedbackContainer"></div>
+      <div id="typingContainer">
+        <input
+          type="text"
+          id="typingInput"
+          placeholder="Start typing to see suggestions..."
+          oninput="suggestWords()"
+        />
+        <div id="suggestionsContainer" class="hidden"></div>
+      </div>
+
+      <div id="resultsContainer">
+        <h1 id="numOfWords">0</h1>
+        <p id="text">Words in Dictionary</p>
+      </div>
+    </div>
+    <script type="module" src="./App.mjs"></script>
+  </body>
+</html>
