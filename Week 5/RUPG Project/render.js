@@ -51,11 +51,21 @@ function Renderer() {
     about.innerHTML = about;
     aboutContainer.appendChild(about);
   }
+  function renderFriends(friends) {
+    const friendsList = document.getElementById("friends-list");
+    friends.forEach((f) => {
+      const name = document.createElement("li");
+      name.setAttribute("class", "friend");
+      name.innerHTML = `${f.fName}${f.lName}`;
+      friendsList.appendChild(name);
+    });
+  }
   return {
     renderPage,
     renderUser,
     renderQuote,
     renderPokemon,
     renderAbout,
+    renderFriends,
   };
 }
