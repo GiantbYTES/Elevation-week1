@@ -44,10 +44,18 @@ function Renderer() {
     name.innerHTML = pokemon.name;
     pokemonNameContainer.appendChild(name);
   }
+  function renderAbout(about) {
+    const aboutContainer = document.getElementById("about-container");
+    const about = document.createElement("div");
+    about.setAttribute("id", "about");
+    about.innerHTML = about;
+    aboutContainer.appendChild(about);
+  }
   return {
     renderPage,
     renderUser,
     renderQuote,
     renderPokemon,
+    renderAbout,
   };
 }
