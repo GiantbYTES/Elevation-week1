@@ -58,3 +58,25 @@ async function getQuote() {
     console.log(error.message);
   }
 }
+
+async function getPokemon() {
+  try {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1302`);
+    if (!res.ok) {
+      throw new Error("Can't get pokemon DB");
+    }
+    const data = await res.json();
+    const pokemonTotal = data.count;
+    const randomId = Math.floor(Math.random() * pokemonTotal);
+    const pokemonObj = data.results[randomId];
+    const pokemonRes = await fetch(pokemonObj.url);
+    const pokemonData = await pokemonRes.json();
+    const pokemonImage =
+      pokemonData.sprites.other["official-artwork"].front_default;
+    const toReturn = { name: pokemonObj.name, imgURL: pokemonImage };
+    console.log(toReturn);
+    return toReturn;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
