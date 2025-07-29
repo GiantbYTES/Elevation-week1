@@ -80,3 +80,20 @@ async function getPokemon() {
     console.log(error.message);
   }
 }
+
+async function getText() {
+  try {
+    const res = await fetch(
+      `https://baconipsum.com/api/?type=all-meat&sentences=5`
+    );
+    if (!res.ok) {
+      throw new Error("Can't get pokemon DB");
+    }
+    const data = await res.json();
+    const toReturn = data[0];
+    console.log(toReturn);
+    return toReturn;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
