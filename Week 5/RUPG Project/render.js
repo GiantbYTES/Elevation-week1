@@ -26,9 +26,28 @@ function Renderer() {
     quote.innerHTML = quote;
     quoteContainer.appendChild(quote);
   }
+  function renderPokemon(pokemon) {
+    //Image
+    const pokemonImageContainer = document.getElementById(
+      "pokemon-image-container"
+    );
+    const pokemonImage = document.createElement("img");
+    pokemonImage.setAttribute("id", "pokemon-image");
+    pokemonImage.setAttribute("src", pokemon.imgURL);
+    pokemonImageContainer.appendChild(pokemonImage);
+    //Name
+    const pokemonNameContainer = document.getElementById(
+      "pokemon-name-container"
+    );
+    const name = document.createElement("div");
+    name.setAttribute("id", "pokemon-name");
+    name.innerHTML = pokemon.name;
+    pokemonNameContainer.appendChild(name);
+  }
   return {
     renderPage,
     renderUser,
     renderQuote,
+    renderPokemon,
   };
 }
