@@ -44,5 +44,17 @@ async function getFriends() {
   }
 }
 
-getUser();
-getFriends();
+async function getQuote() {
+  try {
+    const res = await fetch(`https://api.kanye.rest`);
+    if (!res.ok) {
+      throw new Error("Can't get quote");
+    }
+    const data = await res.json();
+    const quote = data.quote;
+    console.log(quote);
+    return quote;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
