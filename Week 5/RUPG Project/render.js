@@ -75,3 +75,5 @@ function Renderer() {
     renderFriends,
   };
 }
+
+export default Renderer;
