@@ -1,5 +1,11 @@
 function Renderer() {
-  function renderPage(user, quote, pokemon, about, friends) {}
+  function renderPage(user, quote, pokemon, about, friends) {
+    renderUser(user);
+    renderQuote(quote);
+    renderPokemon(pokemon);
+    renderAbout(about);
+    renderFriends(friends);
+  }
   function renderUser(user) {
     //Picture
     const imageContainer = document.getElementById("profile-image");
