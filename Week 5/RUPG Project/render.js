@@ -93,13 +93,34 @@ function Renderer() {
       friendsList.appendChild(name);
     });
   }
+  function emptyPage() {
+    emptyUser();
+    emptyQuote();
+    emptyPokemon();
+    emptyAbout();
+    emptyFriends();
+  }
+  function emptyUser() {
+    $("#profile-image").empty();
+    $("#profile-info").empty();
+  }
+  function emptyQuote() {
+    $("#favorite-quote").empty();
+  }
+  function emptyPokemon() {
+    $("#pokemon-image-container").empty();
+    $("#pokemon-name-container").empty();
+  }
+  function emptyAbout() {
+    $("#about-container").empty();
+  }
+  function emptyFriends() {
+    $("#friends-list").empty();
+  }
+
   return {
     renderPage,
-    renderUser,
-    renderQuote,
-    renderPokemon,
-    renderAbout,
-    renderFriends,
+    emptyPage,
   };
 }
 
