@@ -18,7 +18,6 @@ async function User() {
         city,
         state,
       };
-      //   console.log(mainUser);
       return mainUser;
     } catch (error) {
       console.log(error.message);
