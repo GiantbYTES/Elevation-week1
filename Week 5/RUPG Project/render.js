@@ -22,11 +22,17 @@ function Renderer() {
     //City and State
     const location = document.createElement("div");
     picture.setAttribute("id", "location");
-    location.innerHTML = `${user.city} ${user.state}`;
+    location.innerHTML = `${user.city}, ${user.state}`;
     profileContainer.appendChild(location);
   }
   function renderQuote(quote) {
     const quoteContainer = document.getElementById("favorite-quote");
+    //add title
+    const quoteTitle = document.createElement("p");
+    quoteTitle.setAttribute("id", "quote-title");
+    quoteTitle.innerHTML = "Favorite quote:";
+    quoteContainer.appendChild(quoteTitle);
+    //add quote
     const quoteText = document.createElement("div");
     quoteText.setAttribute("id", "quote");
     quoteText.innerHTML = quote;
@@ -45,6 +51,12 @@ function Renderer() {
     const pokemonNameContainer = document.getElementById(
       "pokemon-name-container"
     );
+    //add title
+    const pokemonTitle = document.createElement("p");
+    pokemonTitle.setAttribute("id", "pokemon-title");
+    pokemonTitle.innerHTML = "Favorite Pokemon:";
+    pokemonNameContainer.appendChild(pokemonTitle);
+    //add name
     const name = document.createElement("div");
     name.setAttribute("id", "pokemon-name");
     name.innerHTML = pokemon.name;
@@ -52,6 +64,12 @@ function Renderer() {
   }
   function renderAbout(about) {
     const aboutContainer = document.getElementById("about-container");
+    //add title
+    const aboutTitle = document.createElement("p");
+    aboutTitle.setAttribute("id", "about-title");
+    aboutTitle.innerHTML = "About me";
+    aboutContainer.appendChild(aboutTitle);
+    //add about
     const aboutText = document.createElement("div");
     aboutText.setAttribute("id", "about");
     aboutText.innerHTML = about;
@@ -59,10 +77,11 @@ function Renderer() {
   }
   function renderFriends(friends) {
     const friendsList = document.getElementById("friends-list");
+    friendsList.innerHTML = "Friends";
     friends.forEach((f) => {
       const name = document.createElement("li");
       name.setAttribute("class", "friend");
-      name.innerHTML = `${f.fName}${f.lName}`;
+      name.innerHTML = `${f.fName} ${f.lName}`;
       friendsList.appendChild(name);
     });
   }
