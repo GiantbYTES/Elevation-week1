@@ -4,13 +4,20 @@ import User from "./model.js";
 const user = await User();
 const renderer = Renderer();
 
-const profile = await user.getUser();
-const friends = await user.getFriends();
-const quote = await user.getQuote();
-const pokemon = await user.getPokemon();
-const about = await user.getText();
+async function newUser() {
+  const profile = await user.getUser();
+  const friends = await user.getFriends();
+  const quote = await user.getQuote();
+  const pokemon = await user.getPokemon();
+  const about = await user.getText();
 
-renderer.renderPage(profile, quote, pokemon, about, friends);
+  renderer.renderPage(profile, quote, pokemon, about, friends);
+}
+//Generate user
+const generateButton = document.getElementById("generate-user-button");
+generateButton.addEventListener("click", () => {
+  renderer.emptyPage();
+  newUser();
+});
 
-// console.log(profile);
-// renderer.renderPage(profile);
+newUser();
