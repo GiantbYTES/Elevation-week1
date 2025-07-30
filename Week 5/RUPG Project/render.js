@@ -16,12 +16,12 @@ function Renderer() {
     //First name and Last name
     const profileContainer = document.getElementById("profile-info");
     const name = document.createElement("div");
-    picture.setAttribute("id", "name");
+    name.setAttribute("id", "name");
     name.innerHTML = `${user.fName} ${user.lName}`;
     profileContainer.appendChild(name);
     //City and State
     const location = document.createElement("div");
-    picture.setAttribute("id", "location");
+    location.setAttribute("id", "location");
     location.innerHTML = `${user.city}, ${user.state}`;
     profileContainer.appendChild(location);
   }
@@ -35,8 +35,13 @@ function Renderer() {
     //add quote
     const quoteText = document.createElement("div");
     quoteText.setAttribute("id", "quote");
-    quoteText.innerHTML = quote;
+    quoteText.innerHTML = `"${quote}"`;
     quoteContainer.appendChild(quoteText);
+    //add author
+    const quoteAuthor = document.createElement("p");
+    quoteAuthor.setAttribute("id", "quote-author");
+    quoteAuthor.innerHTML = "- Kanye";
+    quoteContainer.appendChild(quoteAuthor);
   }
   function renderPokemon(pokemon) {
     //Image
@@ -77,7 +82,10 @@ function Renderer() {
   }
   function renderFriends(friends) {
     const friendsList = document.getElementById("friends-list");
-    friendsList.innerHTML = "Friends";
+    const friendsTitle = document.createElement("p");
+    friendsTitle.setAttribute("id", "friends-title");
+    friendsTitle.innerHTML = "Friends";
+    friendsList.appendChild(friendsTitle);
     friends.forEach((f) => {
       const name = document.createElement("li");
       name.setAttribute("class", "friend");
