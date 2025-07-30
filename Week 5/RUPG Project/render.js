@@ -27,10 +27,10 @@ function Renderer() {
   }
   function renderQuote(quote) {
     const quoteContainer = document.getElementById("favorite-quote");
-    const quote = document.createElement("div");
-    quote.setAttribute("id", "quote");
-    quote.innerHTML = quote;
-    quoteContainer.appendChild(quote);
+    const quoteText = document.createElement("div");
+    quoteText.setAttribute("id", "quote");
+    quoteText.innerHTML = quote;
+    quoteContainer.appendChild(quoteText);
   }
   function renderPokemon(pokemon) {
     //Image
@@ -52,10 +52,10 @@ function Renderer() {
   }
   function renderAbout(about) {
     const aboutContainer = document.getElementById("about-container");
-    const about = document.createElement("div");
-    about.setAttribute("id", "about");
-    about.innerHTML = about;
-    aboutContainer.appendChild(about);
+    const aboutText = document.createElement("div");
+    aboutText.setAttribute("id", "about");
+    aboutText.innerHTML = about;
+    aboutContainer.appendChild(aboutText);
   }
   function renderFriends(friends) {
     const friendsList = document.getElementById("friends-list");
