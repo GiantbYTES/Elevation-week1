@@ -8,10 +8,14 @@
   </head>
   <body>
     <div id="container">
-      <input type="text" id="search" />
-      <button id="searchButton">Search</button>
+      <div id="search-container">
+        <input type="text" id="search-input" />
+        <button id="search-button">Search</button>
+      </div>
+      <div id="loader" class="spinner" style="display: none"></div>
+      <ul id="company-list"></ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
