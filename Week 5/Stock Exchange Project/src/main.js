@@ -7,7 +7,7 @@ const renderer = Renderer();
 async function getCom() {
   const input = document.getElementById("search-input");
   console.log(input);
-  const companies = await model.getCompanies(input.value);
+  const companies = await model.getDataOfCompanies(input.value);
   console.log("getCom output: " + companies);
   return companies;
 }

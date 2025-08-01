@@ -10,7 +10,6 @@ async function Model() {
       const res = await fetch(
         `https://financialmodelingprep.com/api/v3/search?query=${input}&limit=10&exchange=NASDAQ&apikey=${apiKey}`
       );
-      // also https://financialmodelingprep.com/api/v3/profile/AAON,AAPL,MSFT,GOOG?apikey=1xTipGBKJJe1z7zcYpslPWvDxowbuBZl
       if (!res.ok) {
         throw new Error("Can't reach data");
       }
@@ -23,6 +22,26 @@ async function Model() {
       loader.style.display = "none";
     }
   }
-  return { getCompanies };
+  async function getDataOfCompanies(input) {
+    const data = await getCompanies(input);
+    const toSearch = [];
+    data.forEach((c) => {
+      toSearch.push(c.symbol);
+    });
+    const symbolSearch = toSearch.join();
+    try {
+      const res = await fetch(
+        `https://financialmodelingprep.com/api/v3/profile/${symbolSearch}?apikey=${apiKey}`
+      );
+      if (!res.ok) {
+        throw new Error("Can't reach companies data");
+      }
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+  return { getDataOfCompanies };
 }
 export default Model;
