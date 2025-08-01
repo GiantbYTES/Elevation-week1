@@ -10,6 +10,7 @@ async function Model() {
       const res = await fetch(
         `https://financialmodelingprep.com/api/v3/search?query=${input}&limit=10&exchange=NASDAQ&apikey=${apiKey}`
       );
+      // also https://financialmodelingprep.com/api/v3/profile/AAON,AAPL,MSFT,GOOG?apikey=1xTipGBKJJe1z7zcYpslPWvDxowbuBZl
       if (!res.ok) {
         throw new Error("Can't reach data");
       }

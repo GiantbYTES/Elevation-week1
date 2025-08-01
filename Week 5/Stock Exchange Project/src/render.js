@@ -5,7 +5,7 @@ function Renderer() {
     let id = 1;
     companies.forEach((c) => {
       $(companyList).append(
-        `<li class="company-name"><a href="/company.html?symbol=${c.symbol}">${c.name} (${c.symbol})</a></li>`
+        `<li class="company-name"><a href="company.html?symbol=${c.symbol}">${c.name} (${c.symbol})</a></li>`
       );
     });
   }
