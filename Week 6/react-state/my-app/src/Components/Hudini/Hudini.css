@@ -1,0 +1,16 @@
+.Hudini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.Hudini > div:nth-child(1) {
+  background-color: #ffcc00;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 3px;
+}
+.Hudini > div:nth-child(2) {
+  width: 100px;
+}
