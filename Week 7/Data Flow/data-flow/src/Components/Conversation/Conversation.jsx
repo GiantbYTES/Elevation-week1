@@ -1,9 +1,16 @@
 import "./Conversation.css";
 
-export function Conversation() {
+export function Conversation({ convo, sender }) {
+  console.log(convo);
   return (
     <div className="Conversation">
-      <p>Conversation Component</p>
+      {convo.map((m) => (
+        <div>
+          {m.sender === "self" ? <span>Me: </span> : <span>{sender}: </span>}"
+          {m.text}"
+        </div>
+      ))}
+      <p></p>
     </div>
   );
 }

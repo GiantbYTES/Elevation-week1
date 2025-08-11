@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export function Exercise2() {
   const [convs, setConvs] = useState({
-    displayConversation: null,
+    displayConversation: "Laura",
     conversations: [
       {
         with: "Laura",
@@ -47,7 +47,14 @@ export function Exercise2() {
   return (
     <div className="Exercise2">
       {convs.displayConversation ? (
-        <Conversation />
+        <Conversation
+          convo={
+            convs.conversations.filter(
+              (c) => c.with === convs.displayConversation
+            )[0].convo
+          }
+          sender={convs.displayConversation}
+        />
       ) : (
         <List
           contacts={convs.conversations.map((c) => c.with)}
