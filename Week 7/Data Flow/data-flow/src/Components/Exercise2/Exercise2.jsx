@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export function Exercise2() {
   const [convs, setConvs] = useState({
-    displayConversation: "Laura",
+    displayConversation: null,
     conversations: [
       {
         with: "Laura",
@@ -40,7 +40,7 @@ export function Exercise2() {
   function displayConvo(name) {
     setConvs((oldConvs) => ({
       ...oldConvs,
-      [oldConvs.displayConversation]: name,
+      displayConversation: name,
     }));
   }
 
@@ -54,6 +54,7 @@ export function Exercise2() {
             )[0].convo
           }
           sender={convs.displayConversation}
+          displayConvo={displayConvo}
         />
       ) : (
         <List

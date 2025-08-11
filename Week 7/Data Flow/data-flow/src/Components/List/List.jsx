@@ -1,7 +1,7 @@
 import "./List.css";
 import Contact from "../Contact/Contact";
 
-export function List({ contacts, displayConvo }) {
+export function List({ key, contacts, displayConvo }) {
   //   console.log(contacts);
   return (
     <div className="List">

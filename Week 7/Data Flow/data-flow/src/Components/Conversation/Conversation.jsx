@@ -1,6 +1,6 @@
 import "./Conversation.css";
 
-export function Conversation({ convo, sender }) {
+export function Conversation({ convo, sender, displayConvo }) {
   console.log(convo);
   return (
     <div className="Conversation">
@@ -10,7 +10,9 @@ export function Conversation({ convo, sender }) {
           {m.text}"
         </div>
       ))}
-      <p></p>
+      <button className="back" onClick={() => displayConvo("")}>
+        Back
+      </button>
     </div>
   );
 }
