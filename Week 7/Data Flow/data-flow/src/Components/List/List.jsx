@@ -1,6 +1,6 @@
 import "./List.css";
 
-export function List() {
+export function List({ contacts }) {
   return (
     <div className="List">
       <p>List Component</p>

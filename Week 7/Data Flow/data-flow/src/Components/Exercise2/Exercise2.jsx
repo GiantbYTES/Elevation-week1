@@ -39,7 +39,11 @@ export function Exercise2() {
 
   return (
     <div className="Exercise2">
-      {convs.displayConversation ? <Conversation /> : <List />}
+      {convs.displayConversation ? (
+        <Conversation />
+      ) : (
+        <List contacts={convs.conversations.map((c) => c.with)} />
+      )}
     </div>
   );
 }
