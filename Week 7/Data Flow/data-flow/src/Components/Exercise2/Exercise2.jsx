@@ -37,12 +37,22 @@ export function Exercise2() {
     ],
   });
 
+  function displayConvo(name) {
+    setConvs((oldConvs) => ({
+      ...oldConvs,
+      [oldConvs.displayConversation]: name,
+    }));
+  }
+
   return (
     <div className="Exercise2">
       {convs.displayConversation ? (
         <Conversation />
       ) : (
-        <List contacts={convs.conversations.map((c) => c.with)} />
+        <List
+          contacts={convs.conversations.map((c) => c.with)}
+          displayConvo={displayConvo}
+        />
       )}
     </div>
   );
