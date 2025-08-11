@@ -2,7 +2,6 @@ import "./List.css";
 import Contact from "../Contact/Contact";
 
 export function List({ key, contacts, displayConvo }) {
-  //   console.log(contacts);
   return (
     <div className="List">
       {contacts.map((c, id) => (
