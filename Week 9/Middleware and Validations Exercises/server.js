@@ -3,6 +3,7 @@ const path = require("path");
 const { logger } = require("./middlewares/logging.js");
 const { requestCounter } = require("./middlewares/requestCounter.js");
 const { idValidation } = require("./middlewares/validateId.js");
+const postRouter = require("./routes/postRouter.js");
 
 const app = express();
 
@@ -12,6 +13,8 @@ app.use(logger);
 app.use(requestCounter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use("/posts", postRouter);
 
 const wordCounter = { yes: 2 };
 const users = [
